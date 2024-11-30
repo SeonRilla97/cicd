@@ -1,0 +1,10 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: ubuntu_jenkins
+    user: root
+    volumes:
+      - /var/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 7777:8080
